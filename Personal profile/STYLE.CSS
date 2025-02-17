@@ -1,0 +1,983 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+--bg-color:rgb(15,15,15);
+--second-bg-color:#161616;
+--text-color:white;
+--main-color:#2d45ff;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 8%;
+  background:rgba(0, 0,0, 0.7);
+  backdrop-filter: blur(10px);
+  display:flex;
+  justify-content:space-between ;
+  align-items: center;
+  z-index: 100;
+ 
+}
+.logoimg{
+    width: 110px;
+    display: inline-block; /* Display the logo as an inline block */
+    vertical-align: middle; /* Align the logo vertically */
+   
+}
+
+.interestbox{
+    text-align: center; /* Center contents */
+    margin: 2rem 0; /* Space above and below box */
+}
+
+.demobox{
+    text-align: center; /* Center contents */
+    margin: 2rem 0; /* Space above and below box */
+}
+
+.educationbox{
+    text-align: center; /* Center contents */
+    margin: 2rem 0; /* Space above and below box */
+}
+
+#Seemore {
+    background-color: var(--main-color); /* Set background color */
+    color: var(--text-color); /* Set text color */
+    font-size: 1.8rem; /* Adjust font size */
+    font-weight: 600; /* Make text bold */
+    border: none; /* Remove border */
+    padding: 0.8rem 2rem; /* Padding for button size */
+    border-radius: 1.5rem; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+#Seemore:hover {
+    background-color: var(--second-bg-color); /* Change background on hover */
+}
+
+.glowing-separator {
+    border: 0; /* Remove default border */
+    height: 4px; /* Adjust thickness */
+    background-color: var(--main-color); /* Set main color */
+    margin: 2rem 1; /* Space above and below */
+    
+    /* Box shadow to create glow effect */
+    box-shadow: 0 0 10px var(--main-color), /* First glow layer */
+                0 0 20px var(--main-color); /* Second glow layer */
+}
+
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: inline-block; /* Display the text as an inline block */
+    vertical-align: middle; /* Align the text vertically */
+    margin-left: 10px; /* Add some space between the logo and text */
+    
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+
+.navbar a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition:0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    
+}
+
+.navbar a:hover, .navbar a:active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+#menu-icon{
+    font-size: 3rem;
+    color: var(--main-color);
+    display: none;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+.home-content span{
+    color: var(--main-color);
+    font-size: 80%;
+}
+.logo span{
+    color:var(--main-color) ;
+}
+.home-content h1{
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+.home-img img{
+    position: relative;
+    border-radius:50% ;
+    width: 20vw;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.home-img img:hover{
+    box-shadow: 0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+
+.home-content p{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover{
+    color: white;
+    transform: scale(1.3) translateY(-5px);
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.text-animation{
+    font-size: 42px;
+    font-weight: 600;
+    min-width: 280px;
+    margin: 10px 0;
+}
+
+.text-animation span{
+    position: relative;
+}
+
+.text-animation span::before{
+    content: "Cyber Security Student";
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+@keyframes words{
+    0%,
+    20%{
+       content: "Networking Concept "; 
+    }
+    21%,
+    40%{
+        content: "Software Development";
+    }
+    41%,
+    60%{
+        content: "Web Developement ";
+    }
+    61%,
+    80%{
+        content: "Digital Technology";
+    }
+   
+}
+
+@keyframes typing{
+    10%,
+    25%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+
+.heading{
+    text-align: center;
+    font-size: 8rem;
+}
+
+.Interests{
+    background-color: var(--second-bg-color);
+}
+
+.Interests h2{
+    margin-bottom: 8rem;
+}
+
+.Interests-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.Interests-container .Interests-box{
+    flex: 1 1 48rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    height: 550px;
+    border-radius: 2rem;
+    border: 3px solid var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.Interests-container .Interests-box:hover{
+    transform: scale(1.02);
+    background-color: rgb(38, 172, 212);
+    color: black;
+    
+}
+
+.Interests-box img{
+    size: 6cm;
+    align-items: center;
+    height: 200px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: 3px solid var(--main-color);
+}
+
+.Interests-box h3{
+    font-size: 2.6rem;
+}
+
+.Interests-box P{
+    font-size: 1.8rem;
+    margin: 1rem 0 3rem;
+    font-weight: 600;
+    box-shadow: #8c9ef0;
+}
+
+.Qualification{
+    background-color: var(--second-bg-color);
+}
+.Qualification .heading{
+    margin-bottom: 3rem;
+
+}
+
+.Qualification h6{
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.Qualification-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+}
+
+.Qualification-container .Qualification-box{
+    flex: 1 1 48rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    height: 700px;
+    border-radius: 2rem;
+    border: 4px solid var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.ribbon {
+    width: 100%;               /* Stretch the ribbon across the container */
+    height: 70px;              /* Set a fixed height to make it thin */
+    object-fit: cover;         /* Ensure the image covers the fixed height without distortion */
+    display: block;   
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.code-container {
+    background-image: linear-gradient(to right, #070135, #a9cde9);
+    border: 1px solid #000000; /* Grey border */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.code-container pre {
+    font-size: 15px;
+    white-space: pre-wrap; /* Ensures that text wraps */
+    word-break: break-word; /* Ensures long lines don't cause horizontal scroll */
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.code-container h1 {
+    color: #000000; /* Dark grey color for the header */
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 800;
+
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.contact-box {
+    display: flex;
+    max-width: 1000px;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.contact-image {
+    width: 30%;
+}
+.contact-image img {
+    position: relative;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    
+}
+.contact-details {
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    margin-top: 10%;
+    box-shadow: #2d45ff;
+    background-color: #f1f1f1;
+    margin-left: 10%;
+}
+
+.detail-box {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h6 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: 800;
+}
+
+span {
+    color: #000000;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.svg-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--bg-color);
+    margin-right: 20%;
+}
+
+.img {
+    display: flex;
+    gap: 10px;
+}
+
+.img img {
+    width: 40%;
+    height: 40%;
+}
+
+.Qualification-container .Qualification-box:hover{
+    transform: scale(1.02);
+    background-color: rgb(38, 172, 212);
+    color: black;
+}
+
+.Qualification-box img{
+    size: 20cm;
+    align-items: center;
+    height: 350px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: 3px solid var(--main-color);
+}
+
+.Qualification-box p{
+   font-size: 1.8rem;
+    margin: 1rem 0 3rem;
+    font-weight: 600;
+    box-shadow: #8c9ef0;
+}
+
+.Demo{
+    background: var(--bg-color);
+}
+
+.Demo h2{
+    margin-bottom: 8rem;
+}
+
+.Demo-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.Demo-container .Demo-box{
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 2rem;
+    border: 3px solid transparent;
+    transition: 0.5 ease-in-out;
+}
+
+.Demo-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.Demo-box:hover img{
+    transform: scale(1.05);
+}
+
+.Demo-box .Demo-info{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    backdrop-filter:grayscale(70%) ;
+}
+
+.Demo-box .Demo-info:hover{
+    background: rgba(4, 4, 4, 0.804);
+    backdrop-filter: grayscale(0%);
+    border: 3px solid var(--main-color);
+
+    
+}
+
+.Demo-info h4{
+    font-size: 4rem;
+    color: var(--main-color);
+    font-weight: 800;
+}
+
+.Demo-info p{
+    font-size: 2rem ;
+    font-weight: 700;
+    margin: 0.3rem 0 1rem;
+    color: var(--main-color);
+}
+
+.Education-section{
+    background: var(--second-bg-color);
+    padding: 100px 15px; 
+}
+
+.Education-section h2{
+    margin-bottom: 5rem;
+}
+
+.Education-items {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.Education-items::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: calc(50% - 1px);
+}
+
+.Education-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.Education-item:last-child{
+    margin-bottom: 0;
+}
+
+.Education-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.Education-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+.Education-dot{
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.Education-date{
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+}
+
+.Education-content{
+    background-color: var(--second-bg-color);
+    backdrop-filter: blur(20px);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    padding: 30px;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.Education-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.Education-content h3{
+    font-size: 20px;
+    color: var(--main-color);
+    margin: 0 0 10px;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.Education-content p{
+    color: white;
+    opacity: 0.8;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    padding: 100px 0;
+    background-color: var(--second-bg-color);
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.footer .social a{
+    font-size: 26px;
+    color: var(--main-color);
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--main-color);
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-10px);
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover{
+    border-bottom: 3px soild var(--main-color);
+}
+
+.footer ul li{
+    display:inline-block;
+    padding: 0 15px;
+}
+
+.box{
+    height: 40px;
+    width: 290px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.btn {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 30px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 40px; /* Space between buttons */
+    margin-left: 400px;
+    font-weight: 700;
+}
+
+/* Remove margin from the last button */
+.btn:last-child {
+    margin-right: 10;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn, .fa{
+    color: var(--main-color);
+    box-shadow: var(--text-color);
+}
+.fa{
+    font-size: 20px;
+    padding: 10px 18px;
+}
+
+
+
+.cssbtn {
+    width: 200px;
+    height: 40px;
+    background-color: #f0f0f0; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 20px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 40px; /* Space between buttons */
+    margin-left: 400px;
+    font-weight: 700;
+}
+
+/* Remove margin from the last button */
+.cssbtn:last-child {
+    margin-right: 10;
+}
+
+.cssbtn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.cssbtn, .fa{
+    color: var(--main-color);
+    box-shadow: var(--text-color);
+}
+.fa{
+    font-size: 20px;
+    padding: 10px 18px;
+}
+
+.container{
+    background: var(--bg-color);
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
+
+.container .heading{
+    text-align: center;
+    padding-bottom: 15px;
+    color: var(--text-color);
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    font-size: 50px;
+}
+
+.conatiner .box-conatiner{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr) );
+}
+
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 50%; /* Base font size reduced */
+    }
+
+    .logoimg {
+        width: 80px; /* Smaller logo image */
+    }
+
+    .heading {
+        font-size: 4rem; /* Smaller heading */
+    }
+
+    .home-content h1 {
+        font-size: 4rem; /* Smaller home section heading */
+    }
+
+    .home-content p {
+        font-size: 1.6rem; /* Smaller paragraph text */
+    }
+
+    .text-animation {
+        font-size: 2.4rem; /* Smaller text animation */
+    }
+
+    .text-animation span::before {
+        animation: words 20s infinite steps(12); /* Adjust animation steps */
+    }
+
+    .home-img img {
+        width: 30vw; /* Adjusted width */
+    }
+
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.6rem;
+    }
+
+    .Interest-box h3 {
+        font-size: 1.8rem; /* Adjusted interest heading size */
+    }
+
+    .Interest-box p {
+        font-size: 1.6rem; /* Adjusted interest paragraph size */
+    }
+
+    .Demo-info h4 {
+        font-size: 2rem; /* Adjusted demo info heading size */
+    }
+
+    .Demo-info p {
+        font-size: 1.6rem; /* Adjusted demo info paragraph size */
+    }
+
+    .Education-item {
+        font-size: 1.6rem; /* Adjusted education item size */
+    }
+
+    .Education-content h3 {
+        font-size: 1.8rem; /* Adjusted education heading size */
+    }
+
+    .Education-content p {
+        font-size: 1.4rem; /* Adjusted education paragraph size */
+    }
+
+    .contact-details {
+        font-size: 1.6rem; /* Adjusted contact details size */
+    }
+
+    .footer .social a {
+        font-size: 2rem; /* Adjusted footer social icons size */
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    html {
+        font-size: 56.25%; /* Base font size adjusted to 9px */
+    }
+
+    .logoimg {
+        width: 90px; /* Medium logo image size */
+    }
+
+    .heading {
+        font-size: 6rem; /* Medium heading size */
+    }
+
+    .home-content h1 {
+        font-size: 6rem; /* Medium home section heading */
+    }
+
+    .home-content p {
+        font-size: 1.8rem; /* Medium paragraph text */
+    }
+
+    .text-animation {
+        font-size: 3.2rem; /* Medium text animation size */
+    }
+
+    .text-animation span::before {
+        animation: words 20s infinite steps(16); /* Adjust animation steps */
+    }
+
+    .home-img img {
+        width: 40vw; /* Adjusted width */
+    }
+
+    .social-icons a {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 2rem;
+    }
+
+    .Interest-box h3 {
+        font-size: 2.2rem; /* Adjusted interest heading size */
+    }
+
+    .Interest-box p {
+        font-size: 1.8rem; /* Adjusted interest paragraph size */
+    }
+
+    .Demo-info h4 {
+        font-size: 2.5rem; /* Adjusted demo info heading size */
+    }
+
+    .Demo-info p {
+        font-size: 1.8rem; /* Adjusted demo info paragraph size */
+    }
+
+    .Education-item {
+        font-size: 1.8rem; /* Adjusted education item size */
+    }
+
+    .Education-content h3 {
+        font-size: 2.4rem; /* Adjusted education heading size */
+    }
+
+    .Education-content p {
+        font-size: 1.6rem; /* Adjusted education paragraph size */
+    }
+
+    .contact-details {
+        font-size: 1.8rem; /* Adjusted contact details size */
+    }
+
+    .footer .social a {
+        font-size: 2.2rem; /* Adjusted footer social icons size */
+    }
+}
