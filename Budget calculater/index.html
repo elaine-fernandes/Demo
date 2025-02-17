@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Calculate weekly budget">
+        <meta name="theme-color" content="#ffffff">
+        <title>Average </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" defer> </script>
+    
+    <body><h1>Average</h1>
+        <form id="BudgetForm">
+        <!-- Numeric field for weekly budget -->
+        <div>
+            <label for="weeklybudget">Weekly Budget:</label>
+            <input type="number" id="weeklybudget" name="weeklybudget" min="0">
+        </div>
+
+        <!-- Numeric field for Rent -->
+        <div>
+            <label for="rent">Rent:</label>
+            <input type="number" id="rent" name="rent" min="0">
+        </div>
+
+        <!-- numeric field for Food -->
+        <div>
+            <label for="food">Food:</label>
+            <input type="number" id="food" name="food" min="0">
+        </div>
+        
+        <!-- numeric field for Transport -->
+        <div>
+            <label for="transport">Transport:</label>
+            <input type="number" id="transport" name="transport" min="0">
+        </div>
+
+        <!-- add result button -->
+        <div>
+            <button type="button" id="Calculate"name="Calculate">Calculate</button>
+        </div>
+
+    </form>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+label {
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+input, #result {
+    padding: 0.4rem;
+    width: 95%;
+    border: 1px solid;
+    margin-bottom: 1rem;
+}
+
+#result {
+    min-height: 3rem;
+}
+
+button {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 0.6rem;
+}
