@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate average of marks input by user">
+    <meta name="theme-color" content="#ffffff">
+    <title>Average </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer> </script>
+    
+    <body><h1>Average</h1>
+        <form id="averageForm">
+        <!-- text field for name -->
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+
+        <!-- text field for subject -->
+        <div>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject">
+        </div>
+
+        <!-- numeric field for result -->
+        <div>
+            <label for="result">Result:</label>
+            <input type="number" id="result" name="result"min="0" max="100" value="0">
+        </div>
+
+        <!-- add result button -->
+        <div>
+            <button type="button" id="addResult"name="addResult">Add result</button>
+        </div>
+
+        <!-- calculate average button -->
+        <div>
+            <button type="button" id="calculateAverage"name="calculateAverage">Calculate</button>
+        </div>
+
+    </form>
+    <p id="output"></p>
+</body>
+</html>
