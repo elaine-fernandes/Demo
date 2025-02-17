@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian's Bevvies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    
+    <header>
+        <a href="#" id="logo">
+            <img src="./Image/MainLogo.png" alt="">
+        </a>
+        <i id="menu-icon" class="bx bx-menu"></i>
+        <ul id="navbar">
+        </ul>
+        <div id="header-icon">
+        </div>
+        <div id="search-box">
+            <input type="search" name="search" id="Search" placeholder="Search Here...">
+        </div>
+    </header>
+    <section id="home">
+        <div id="home-text">
+            <h1> Blended with<br>True Delight</h1>
+            <p>Blended with love and care, our beverages are packed with nutrients and the fresh flavors of fruits. We mix it up to create a delightful fusion that energizes and refreshes, offering you a taste experience that's as wholesome as it is delicious.</p>
+            <a href="#" id="shop-btn" class="btn">Shop Now</a>
+        </div>
+        <div id="home-img">
+            <img src="./Image/smoothie1.png" alt="">
+        </div>
+    </section>
+
+    <form id="drinkForm">
+        
+        <fieldset>
+            <legend>Size</legend>
+            <select id="sizeSlecet" name="sizechoice" class="select-size">
+                <option value="0">Select drink size</option>
+                <option value="Small - £2.70">Small - £2.70</option>
+                <option value="Medium - £3.20" selected="selected">Medium - £3.20</option>
+                <option value="Large - £3.70">Large - £3.70</option>
+                <option value="Extra Large - £4.50">Extra Large - £4.50</option>
+              </select>
+        
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>Type</legend>
+            <select id="sizeType" name="type" class="select-type">
+                <option  value="0">Select drink type</option>
+                <option value="smoothie">Smoothie</option>
+                <option value="milkshake">Milkshake</option>
+              </select>
+        </fieldset>
+
+        <fieldset id="Ingredients">
+            <legend>Ingredients- at least 1</legend>
+            <br>
+            <p>
+                <input type="checkbox" id="banana" name="ingredients" value="banana">
+                <label for="banana">Banana</label>
+            </p>
+            <p>
+                <input type="checkbox" id="raspberry" name="ingredients" value="raspberry">
+                <label for="raspberry">Raspberry</label>
+            </p>
+            <p>
+                <input type="checkbox" id="cranberry" name="ingredients" value="cranberry">
+                <label for="cranberry">Cranberry</label>
+            </p>
+            <p>
+                <input type="checkbox" id="strawberry" name="ingredients" value="strawberry">
+                <label for="strawberry">Strawberry</label>
+            </p>
+            <p>
+                <input type="checkbox" id="chocolate" name="ingredients" value="chocolate">
+                <label for="chocolate">Chocolate</label>
+            </p>
+        </fieldset>
+
+        <fieldset id="juicebasefieldset" style="display: none;">
+            <legend>Juice Base</legend>
+            <br>
+            <p>
+                <input type="radio" name="juicebase" id="applejuice" value="applejuice">
+                <label for="applejuice">Apple Juice</label>
+            </p>
+            <br>
+            <p>
+                <input type="radio" name="juicebase" id="orangejuice" value="orangejuice" checked>
+                <label for="orangejuice">Orange Juice</label>
+            </p>
+        </fieldset>
+        <fieldset id="milkbasefieldset" style="display: none;">
+            <legend>Milk Base</legend>
+            <p>
+                <input type="radio" name="milkbase" id="wholemilk" value="wholemilk">
+                <label for="wholemilk">Whole Milk</label>
+            </p>
+            <p>
+                <input type="radio" name="milkbase" id="semi-skimmed" value="semi-skimmed">
+                <label for="semi-skimmed">Semi-Skimmed Milk</label>
+            </p>
+            <p>
+                <input type="radio" name="milkbase" id="skimmed" value="skimmed" checked>
+                <label for="skimmed">Skimmed Milk</label>
+            </p>
+            <p>
+                <input type="radio" name="milkbase" id="coconutmilk" value="coconutmilk">
+                <label for="coconutmilk">Coconut Milk</label>
+            </p>
+            <p>
+                <input type="radio" name="milkbase" id="oatmilk" value="oatmilk">
+                <label for="oatmilk">Oat Milk</label>
+            </p>
+        </fieldset>
+        
+
+        <fieldset id="extratoppingsfieldset" style="display: none;">
+            <legend>Extra Toppings</legend>
+            <p>
+                <input type="checkbox" name="extratoppings" id="malt" value="malt">
+                <label for="malt">Malt</label>
+            </p>
+            <p>
+                <input type="checkbox" name="extratoppings" id="marshmallows" value="marshmallows">
+                <label for="marshmallows">Marshmallows</label>
+            </p>
+            <p>
+                <input type="checkbox" name="extratoppings" id="whippedcream" value="whippedcream">
+                <label for="whippedcream">Whipped Cream</label>
+            </p>
+            <p>
+                <input type="checkbox" name="extratoppings" id="flake" value="flake">
+                <label for="flake">A Flake</label>
+            </p>
+        </fieldset>
+
+        <p>Current drink Cost: £<span id="cost"></span></p>
+
+        <button type="button" id="addToOrder">Add to Order</button>
+        <button type="button" id="placeOrder">Place Order</button>
+        <!-- Add the "Save My Favorite" and "Order My Favorite" buttons to the form -->
+        <button type="button" id="saveFavorite" disabled>Save My Favorite</button>
+        <button type="button" id="orderFavorite">Order My Favorite</button>
+
+
+        <div id="orderDetails">
+            <h3>Order Details</h3>
+            <ul id="orderList"></ul>
+            <!-- <p>Total: £<span id="totalCost">0</span></p> -->
+        </div>
+    </form>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
